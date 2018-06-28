@@ -219,9 +219,9 @@ public class ImageRotateModule extends ReactContextBaseJavaModule {
                 File tempFile = createTempFile(mContext, mimeType);
                 writeCompressedBitmapToFile(rotated, mimeType, tempFile);
 
-                if (mimeType.equals("image/jpeg")) {
-                    copyExif(mContext, Uri.parse(mUri), tempFile);
-                }
+               // if (mimeType.equals("image/jpeg")) {
+               //     copyExif(mContext, Uri.parse(mUri), tempFile);
+               // }
 
                 mSuccess.invoke(Uri.fromFile(tempFile).toString());
 
